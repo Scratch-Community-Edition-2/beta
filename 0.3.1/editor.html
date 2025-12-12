@@ -1,55 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google" value="notranslate">
-    <title>Scratch Community Edition</title>
-	<link rel="icon" href="favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    
-      <link rel="manifest" href="manifest.webmanifest">
-    
-    <style>
-      #splash {
-        position: absolute; width: 100%; height: 100%; top: 0; left: 0;
-        display: flex; align-items: center; justify-content: center;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #24652f;
-      }
-      .tw-loaded #splash, #splash-content { display: none; }
-      #splash[splash-theme="dark"] { background-color: #333; color: #fff; }
-      #splash-spinner:after {
-        content: " "; display: block; width: 64px; height: 64px;
-        border-radius: 50%; border: 6px solid; border-color: currentColor transparent currentColor transparent;
-        animation: splash-spinner 1.2s linear infinite;
-      }
-      @keyframes splash-spinner {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-    </style>
-    <link rel="dns-prefetch" href="https://trampoline.turbowarp.org/">
-    <link rel="dns-prefetch" href="https://projects.scratch.mit.edu/">
-    <link rel="dns-prefetch" href="https://assets.scratch.mit.edu/">
-  </head>
-  <body>
-    <div id="splash" aria-hidden="true">
-      <noscript>
-        <h1>Enable JavaScript</h1>
-      </noscript>
-      <div id="splash-content">
-        <div id="splash-spinner"></div>
-     </div>
-    </div>
-    <script>
-      (function() {
-        document.querySelector('#splash-content').style.display = 'block';
+<html><head><title>Scratch CE 2 Studio</title><link rel="icon" type="image/png" href="/0.3.1/favicon.png"></head><body><iframe allow="clipboard-read; clipboard-write" id="frame" src="https://warp.mistium.com/editor.html?project_url=https://scratch-community-edition-2.github.io/beta/onlineprojects/ce2.sb3&amp;hash=" style="width: 100%; height: 100%; border: 0px">
+</iframe>
+<script src="functions.js" async=""></script>
+<style>body{margin:0}
+@font-face {
+  font-family: arial;
+  src: url(beta/0.3.1/fonts/arial.ttf);
+}
+
+@font-face {
+  font-family: norms;
+  src: url(/norms.otf);
+}
+button {
+  
+ background-color: white;
+padding: 10px;
+
+border-radius: 10px;
+border: 2px outset #ddd;
+background-image: linear-gradient(#fff, #ddd);
+color: black;
+font-family: "thought";
+
+
+font-size: 15px;
+
+flex: 1; 
+  
+}
+
+button:active {
+  
+ background-color: white;
+padding: 10px;
+
+border-radius: 10px;
+border: 2px inset #777;
+background-image: linear-gradient(#999, #bbb);
+color: white;text-shadow: black 1px 0 10px;
+font-family: "thought";
+
+</style>
+
+<meta charset="utf-8">
+
+<div style="
+
+top: 0px;
+background: linear-gradient(0deg, rgba(102,194,247,1) 0%, rgba(153,217,255,1) 9%, rgba(153,217,255,1) 20%, rgba(127,208,255,1) 37%, rgba(67,183,249,1) 60%, rgba(17,149,223,1) 100%);
+box-shadow: 0px 0px 20px #00000033; display: flex;  align-items: center; height: 48px; position: absolute; width: 200px; mask-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+
+">
+<img src="/fon.png" style="height: 48px">
+
+</div>
+
+<div style="position: absolute; top: 2px; left: 100px"><button onclick="document.location.href = 'project' + (params.has('id') ? ('?id=' + params.get('id')) : '')">🔄 View Project</button> <!--<button onclick="document.location.href = document.getElementById('frame').src" title="May load project updates faster">📝 Base Editor</button>--></div>
+
+<script>
+
+
+params = new URLSearchParams(document.location.search);
+
+      async function loadinfo() {
         
-        try {var localTheme = localStorage.getItem('tw:theme');} catch (e) {}
-        if (localTheme ? localTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches) document.querySelector('#splash').setAttribute('splash-theme', 'dark');
+var gethash = getFileContents(('hash/' + params.get('id') + '.txt'), 'files', 'JBMConGithub'); hash = await gethash;
+
+document.getElementById("frame").src = 'https://warp.mistium.com/editor.html?project_url=https://jbmcongithub.github.io/files/projectloader.sb3&hash=' + hash;
+
+
+}
+
+setTimeout(function(){
+    loadinfo();
+}, 100);
+      
+      
+      
+      async function clipFile() {
+      
+      var returnfile = getFileContents('projects/' + params.get('id') + '.txt', 'files', 'JBMConGithub'); thefile = await returnfile;
+      navigator.clipboard.writeText(thefile)
+      
+      // failsafe for large files
+      if (thefile == '') {
         
-      })();
-    </script>
-    <div id="app"></div>
-  <script src="js/vendors~addon-settings~credits~editor~embed~fullscreen~player.js"></script><script src="js/vendors~editor~embed~fullscreen~player.js"></script><script src="js/addon-settings~addons~editor~fullscreen~player.js"></script><script src="js/editor~embed~fullscreen~player.js"></script><script src="js/editor.js"></script></body>
-</html>
+       var returnfile = returnProject('https://jbmcongithub.github.io/files/projects/' + params.get('id') + '.txt'); thefile = await returnfile;
+       navigator.clipboard.writeText(thefile)
+        
+      }
+      
+      }
+      
+      
+</script>
+
+<div id="waiter" style="color: white; font-family: norms; text-align: center; display: none; justify-content: center; align-items: center; font-size: 30px; background-color: rgba(0, 0, 0, 0.6); width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;" onclick="clipFile(); document.getElementById('waiter').style.display = 'none'">Click to load project</div>
+
+
+</body></html>
