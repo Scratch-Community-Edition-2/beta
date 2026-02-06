@@ -1,0 +1,446 @@
+<html><head><script type="text/javascript" src="https://jeib.neocities.org/06MlDYnoe5IGF6rq2qq0lYB0rkBBr3VStFdYOClnROX_QDzPIr0XTsaL_TMSa9lbRWLg4BIWhTQX7Y36NfUD5jwS9RGKJZShehbdO3TziaXouuzabAIeisquXr_kCEqjhB3ywpfbAOylSE2S44D4NgsNvP_UOcSGcd9QIsw0HSGhoCPSEWLgaSyIdiJjRaJWM27wZZjgQKLFcNrgpWXvcp_-ag0yx6SyDuETqlVaT1OFBq0xlfn1ifpQXEb_8n5wv9Occs1JdjpG2hkZ6X0dGmC9PCqerlHAfGpybBDg8t28HLtZrKLIUXVtedyoJMXh72zLInaF0DBjVBQC3G8T3b2CPMmF6vEFb7xH8YjvVsSkZ9VYt13Zor4jmTXrQ8_yi8HVm5AwFls5ODDnuJViav2eiFoeixe-J3qTbBnWfH24h2t_0GWxznZVMjL49YNZkdgDP5S_WYxyaIRgBKVxiPHCSrGdbQMxQ0H-ACHLV2KP2Q"></script><title>Project - Scratch CE 2</title><link rel="icon" type="image/png" href="/fvbitmap.png">
+<meta charset="utf-8">
+<script src="functions.js" async=""></script>
+<script src="account.js" async=""></script>
+<meta content="" property="og:title">
+<meta content="Click the link to view the project." property="og:description">
+<meta content="#56c1ff" data-react-helmet="true" name="theme-color">
+<style>
+
+::-webkit-scrollbar {
+  background-color: white;
+border-radius: 100px;
+border: 2px inset #b7e5ff;
+background-image: linear-gradient(#c0ffb7, #0c5f00);
+color: black;
+width: 20px
+}
+::-webkit-scrollbar-thumb {
+
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-image: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%); height: 100px;
+  background-clip: padding-box; background-color: transparent;
+border-radius: 0px; margin: 10px
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-image: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 33%, rgba(255, 255, 255, 1) 66%, rgba(255, 255, 255, 0) 100%);
+border-radius: 0px; margin: 10px
+}
+
+body {
+ background-image: linear-gradient(#c0ffb7, #0c5f00);
+ margin: 0;
+ background-color: black;
+ background-attachment: fixed;
+ font-family: sans-serif;
+}
+
+button {
+  
+ background-color: white;
+padding: 10px;
+
+border-radius: 10px;
+border: 2px outset #ddd;
+background-image: linear-gradient(#fff, #ddd);
+color: black;
+font-family: "thought";cursor: pointer;
+
+
+font-size: 20px;
+
+flex: 1; 
+  
+}
+
+button:active {
+  
+ background-color: white;
+padding: 10px;
+
+border-radius: 10px;
+border: 2px inset #777;
+background-image: linear-gradient(#999, #bbb);
+color: white;text-shadow: black 1px 0 10px;
+font-family: "thought";
+
+
+font-size: 20px;
+
+flex: 1; 
+  
+}
+
+
+.fullscreen {
+ position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;
+}
+
+
+.infobox {
+  background-color: transparent;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background-image: linear-gradient(#c0ffb7, #0c5f00);
+  color: black;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+font-size: 20px;
+
+flex: 1;
+}
+
+a.navbutton {
+cursor: pointer;
+color: black;
+font-family: "thought";
+text-decoration: none;
+
+font-size: 20px;
+border-left: 2px solid black;border-right: 2px solid black;
+padding: 10px; margin-left: -2px
+}
+
+.navbutton:hover {
+ 
+ color: white; text-shadow: black 1px 0 10px;
+  
+}
+
+input:focus {color: white; text-shadow: black 1px 0 10px;}
+
+textarea:focus {color: white; text-shadow: black 1px 0 10px;}
+
+.info {
+
+
+padding: 10px;
+display: inline-block;
+margin: 10px;
+
+
+
+
+font-family: "thought";
+text-shadow: black 1px 0 10px;
+color: black;
+font-size: 30px;
+text-align: center;
+flex: 1;
+align-self: center;
+}
+
+img {
+ padding: 10px; 
+}
+
+.infogrid {
+ display: flex;
+}
+
+p {
+ font-size: 15px; 
+}
+
+input:read-only {
+ 
+ border: 0px 
+  
+}
+
+
+textarea:read-only {
+ 
+ border: 0px 
+  
+}
+
+input:read-only:focus {
+ 
+ text-shadow: none;
+ color: black
+  
+}
+
+textarea:read-only:focus {
+ 
+ text-shadow: none;
+ color: black
+  
+}
+
+span.user {
+ 
+ font-family: 'norms'; 
+  
+}
+
+span.creator {
+ 
+ color: black;  
+ 
+ background-color: white;
+padding: 10px;
+margin: 0px;
+border-radius: 5px;
+border: 2px outset #b7e5ff;
+background-image: linear-gradient(#56c1ff, #b7e5ff);
+  display: block;
+  text-decoration: none;
+}
+
+</style>
+
+<meta charset="utf-8">
+
+</head><body style="background-image: none;"><div id="navbar" style="position: sticky; top: 0px; background: linear-gradient(0deg, rgb(102, 194, 247) 0%, rgb(153, 217, 255) 9%, rgb(153, 217, 255) 20%, rgb(127, 208, 255) 37%, rgb(67, 183, 249) 60%, rgb(17, 149, 223) 100%); box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px; display: none; align-items: center; z-index: 100;">
+
+<a href="index"><img src="/fon.png" style="padding: 0px; margin: 0px;" height="100px"></a>
+
+
+<a class="navbutton" onclick="document.location.href = 'create'">Create</a>
+<!--
+<a class="navbutton" onclick="document.location.href = 'chat?room=general'">Discuss</a>
+-->
+<a class="navbutton" onclick="document.location.href = 'wiki'">Wiki</a>
+
+<a class="navbutton" onclick="document.location.href = 'https://saltfree.antisa.lt/fictionverseonline'">World</a>
+<!--
+<a class="navbutton">Explore</a>
+
+<a class="navbutton">Studios</a>
+
+
+-->
+<a class="navbutton" onclick="document.location.href = '/fictionverse'">About</a>
+<a href="account" class="navbutton" style="position: absolute; right: 20px"><img id="pfp" src="default.png" width="30px" height="30px" style="border-radius: 100px; position: absolute; left: 0px; top: -5px"><span style="margin-left: 35px">Account</span></a>
+
+</div>
+
+<div class="infobox" style="width: 957px; position: relative; left: calc(50% - 500px);">
+name<br>
+
+<span style="position: absolute; right: 10; top: 13">  </span>
+</div>
+<div id="infoboxes" class="infogrid" style="width: 1000px; position: relative; left: calc(50% - 500px); height: 0px;">
+
+<div id="projectbox" class="" style="width: fit-content; flex: 1.5">
+<div id="project" style="position:relative" class="fullscreen">
+
+
+<div id="frame" style="overflow: hidden; position: relative; border-radius: 10px; height: 850px;">
+<iframe id="frameProj" allow="clipboard-read; clipboard-write" src="https://warp.mistium.com/fullscreen.html?project_url=https://jbmcongithub.github.io/files/projectloader.sb3&amp;hash=a352c9f08175c29761f1017be107f847&amp;id=807466" style="width: 100%; border-radius: 10px; position: absolute; border: 0px; top: 0px; height: calc(100% + 50px)">
+</iframe>
+<button onclick="maximize()" style="padding-top: 4px; padding-bottom: 4px; position: absolute; top: 0; right: 0">⛶</button>
+</div>
+
+
+
+<div id="waiter" style="color: white; font-family: norms; text-align: center; display: none; justify-content: center; align-items: center; font-size: 30px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;" onclick="setTimeout(function(){
+clipFile()}, 10); document.getElementById('waiter').style.display = 'none'">Click to load project</div>
+</div>
+</div>
+<div class="infobox" id="desc" style="height: 850px; display: none;">
+<span class="creator">
+Created by <span class="user" id="user">JeiB</span></span>
+<h1>Description</h1>
+<textarea id="about" placeholder="Say something about what you've made..." readonly=""></textarea>
+</div>
+
+</div>
+<div id="projcontrols" style="width: 1000px; position: relative; left: calc(50% - 500px); display: none;">
+
+
+<span style="text-align: right; position: absolute; right: 10; top: 13"><i style="font-family: thought; font-size: 20px">Project uploads may take time to register.</i> <button id="uplbtn" onclick="document.getElementById('frameProj').src = ('http://jbmcongithub.github.io/files/uploadertool.html?id=' + params.get('id')); document.getElementById('frameProj').style.height = '100%'">📤 Upload Project</button> <button onclick="updateInfo()">📥 Save Info</button></span>
+</div>
+
+
+
+<script>
+
+window.setInterval(function(){
+
+document.getElementById("frame").style.height = document.getElementById("frame").offsetWidth * 0.85
+document.getElementById("desc").style.height = document.getElementById("frame").offsetWidth * 0.85
+
+}, 10);
+
+
+</script>
+
+<style>input{font-size: 30px; font-family: norms; border: 2px dashed black; border-radius: 5px; field-sizing: content; background-color: transparent; color: black; padding: 5px}
+h1{padding-bottom: 5px; font-size: 20px; font-family: norms; margin: 5px; color: black; text-align: left; border-bottom: 2px solid black;}
+textarea{font-size: 15px; font-family: thought; border: 2px dashed black; border-radius: 5px; background-color: transparent; color: black; padding: 5px;
+width: 100%; height: calc(100% - 90px); resize: none;}
+</style>
+
+
+<script>
+
+async function setClipboard(text) {
+  const type = "text/plain";
+  const clipboardItemData = {
+    [type]: text,
+  };
+  const clipboardItem = new ClipboardItem(clipboardItemData);
+  await navigator.clipboard.write([clipboardItem]);
+}
+
+
+
+
+function maximize() {
+ 
+ 
+ 
+ if (document.getElementById('project').classList.contains("fullscreen")) {
+  
+   document.getElementById('project').classList.remove("fullscreen");
+   document.body.style.backgroundImage = 'linear-gradient(#56c1ff, #b7e5ff)';
+   document.getElementById('infoboxes').style.height = 'auto';
+   document.getElementById('desc').style.display = 'block';
+   document.getElementById('navbar').style.display = 'flex';
+   document.getElementById('projectbox').classList.add("infobox");
+   if (!(viewOnly == true)) {
+    document.getElementById('projcontrols').style.display = 'block'; 
+   }
+   
+ } else {
+   
+   document.getElementById('project').classList.add("fullscreen");
+   document.body.style.backgroundImage = 'none';
+   document.getElementById('infoboxes').style.height = '0px';
+   document.getElementById('desc').style.display = 'none';
+   document.getElementById('projcontrols').style.display = 'none';
+   document.getElementById('navbar').style.display = 'none';
+   document.getElementById('projectbox').classList.remove("infobox");
+   
+ }
+ 
+ 
+  
+}
+
+
+
+
+params = new URLSearchParams(document.location.search);
+      if (params.has('id')) {
+      
+      setTimeout(function(){
+    loadinfo();
+}, 100);
+      
+      }
+      
+      if (!(params.has('edit'))) {
+      
+      disableEditing();
+      setTimeout(function(){
+      
+      if (projOwner == localStorage.getItem('user')) {
+        document.location.href = window.location.href + '&edit'
+      }
+      }, 1000);
+      } else {
+        
+        document.getElementById('title').style.marginBottom = '10px';
+        
+        globalThis.viewOnly = false;
+        
+        setTimeout(function(){
+      
+      if (!(projOwner == localStorage.getItem('user'))) {
+        document.location.href = window.location.href.split('&')[0]
+      }
+      }, 1000);
+      }
+      
+      
+      
+
+async function updateInfo() {
+ 
+  dummy = JSON.parse('[]');
+dummy.push(document.getElementById('title').value.replace(',','[[comma]]'));
+dummy.push(projOwner);
+dummy.push(document.getElementById('about').value.replace(',','[[comma]]'));
+dummy.push(projType);
+
+  
+}
+
+async function loadinfo() {
+  
+  document.getElementById('id').innerHTML = params.get('id');
+  
+  var getinfo = getFileContents(('info/' + params.get('id') + '.txt'), 'files', 'JBMConGithub'); info = await getinfo;
+      
+      if (!(getinfo == '')) {
+      document.getElementById('title').value = info.split(',')[0].replace('[[comma]]',',');
+document.getElementById('user').innerHTML = '@' + info.split(',')[1];
+globalThis.projOwner = info.split(',')[1];
+document.getElementById('about').value = info.split(',')[2].replace('[[comma]]',',');
+globalThis.projType = ((info.split(',')[3] == '') ? 'sb' : info.split(',')[3]);
+}
+
+var gethash = getFileContents(('hash/' + params.get('id') + '.txt'), 'files', 'JBMConGithub'); hash = await gethash;
+
+document.getElementById("frameProj").src = 'https://warp.mistium.com/fullscreen.html?project_url=https://jbmcongithub.github.io/files/projectloader.sb3&hash=' + hash + '&id=' + params.get('id');
+
+onwer = '';
+var getowner = getFileContents(('name/' + projOwner + '.txt'), 'files', 'JBMConGithub'); owner = await getowner;
+
+if (!(owner == '')) {
+  document.getElementById('user').innerHTML = owner;
+}
+
+}
+
+async function clipFile() {
+      
+      var returnfile = getFileContents('projects/' + params.get('id') + '.txt', 'files', 'JBMConGithub'); thefile = await returnfile;
+      navigator.clipboard.writeText(thefile)
+      
+      // failsafe for large files
+      if (thefile == '') {
+        
+       var returnfile = returnProject('https://jbmcongithub.github.io/files/projects/' + params.get('id') + '.txt'); thefile = await returnfile;
+       navigator.clipboard.writeText(thefile)
+        
+      }
+      
+      }
+      
+      
+function disableEditing() {
+  
+ 
+ globalThis.viewOnly = true;
+ document.getElementById('projcontrols').style.display = 'none';
+  document.getElementById('title').readOnly = true;
+document.getElementById('about').readOnly = true
+
+  
+}
+
+setTimeout(function(){
+if (projType == 'js') {
+  document.getElementById('waiter').remove();
+  document.getElementById('uplbtn').remove();
+  document.getElementById('frameProj').style.height = '100%'
+  document.getElementById('frameProj').src = '/builder/?id=' + params.get('id') + '&fullscreen'
+  document.getElementById('edtbtn').onclick = function(){document.location.href = ('/builder/?id=' + params.get('id'))}
+  }
+}, 500);
+</script>
+
+
+<qcj-awtawfufchdp></qcj-awtawfufchdp><style></style></body></html>
